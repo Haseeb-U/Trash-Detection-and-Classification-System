@@ -4,24 +4,6 @@
 
 ---
 
-## 📋 Table of Contents
-1. [Executive Summary](#executive-summary)
-2. [Project Overview](#project-overview)
-3. [Features](#features)
-4. [Dataset](#dataset)
-5. [Methodology](#methodology)
-6. [Tools & Technologies](#tools--technologies)
-7. [System Architecture](#system-architecture)
-8. [Model Performance](#model-performance)
-9. [Installation & Setup](#installation--setup)
-10. [Usage Guide](#usage-guide)
-11. [Results & Evaluation](#results--evaluation)
-12. [Deployment](#deployment)
-13. [Limitations & Future Work](#limitations--future-work)
-14. [Credits](#credits)
-
----
-
 ## 📊 Executive Summary
 
 The **Intelligent Waste Detection System** is an end-to-end deep learning solution designed to automatically detect and classify waste materials in real-time. This project leverages the **YOLOv11** object detection architecture to provide accurate, fast, and scalable waste classification for environmental sustainability and smart recycling systems.
