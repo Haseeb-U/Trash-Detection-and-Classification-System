@@ -1,0 +1,91 @@
+About Dataset
+Overview
+This is a curated and balanced image dataset designed for trash classification tasks. The dataset is compiled from three publicly available waste image datasets and restructured into eight consistent and representative classes. Each class contains exactly 1,000 images, resulting in a total of 8,000 images. This dataset is suitable for machine learning and deep learning experiments.
+
+Label Categories
+The dataset consists of the following eight trash categories:
+
+plastic
+paper
+metal
+glass
+organic
+e-waste
+textile
+trash
+Each image is stored in a directory corresponding to its label.
+
+Source Datasets
+This dataset is a combination of the following publicly available datasets:
+
+Garbage Classification Dataset
+RealWaste Dataset
+Balanced Waste Classification Dataset
+The images were reorganized, relabeled, and filtered based on relevance, and sampled to ensure a uniform class distribution.
+
+Label Mapping
+# garbage_classification
+"plastic": "plastic",
+"paper": "paper",
+"metal": "metal",
+"cardboard": "paper",
+"brown-glass": "glass",
+"green-glass": "glass",
+"white-glass": "glass",
+"biological": "organic",
+"battery": "trash",
+"trash": "trash",
+"shoes": "textile",
+"clothes": "textile",
+
+# real_waste
+"Plastic": "plastic",
+"Paper": "paper",
+"Metal": "metal",
+"Cardboard": "paper",
+"Glass": "glass",
+"Food Organics": "organic",
+"Vegetation": "organic",
+"Miscellaneous Trash": "trash",
+"Textile Trash": "textile",
+
+# waste_classfication_dataset
+"plastic": "plastic",
+"paper": "paper",
+"metal": "metal",
+"glass": "glass",
+"organic": "organic",
+"trash": "trash",
+"cardboard": "paper",
+
+# e-waste
+"Battery": "e-waste",
+"Keyboard": "e-waste",
+"Microwave": "e-waste",
+"Mobile": "e-waste",
+"Mouse": "e-waste",
+"PCB": "e-waste",
+"Player": "e-waste",
+"Printer": "e-waste",
+"Television": "e-waste",
+"Washing Machine": "e-waste"
+Dataset Balancing Method
+Method:
+Each class is processed through a ResNet50 pretrained feature extractor on ImageNet.
+Images are converted into 2048-dimensional feature vectors.
+MiniBatchKMeans clustering is applied to select 1,000 representative images per class.
+This avoids bias introduced by naive random sampling, which can preserve outliers or duplicates.
+Objective:
+Prevent overfitting on majority classes.
+Ensure the dataset is visually balanced, not just numerically equal.
+Improve the fairness and overall performance of CNN-based and SVM-based classification models.
+File/Folder Structure
+File/Folder	Description
+plastic/	plastic waste
+paper/	paper waste
+metal/	metal objects
+glass/	various glass items
+organic/	food and organic waste
+e-waste/	electronic waste like cables, batteries, devices
+textile/	clothing and textile materials
+trash/	mixed/unclassified trash
